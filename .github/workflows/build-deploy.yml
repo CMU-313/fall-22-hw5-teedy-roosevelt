@@ -59,20 +59,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: badges
           force: true
-      - name: Format
+      - name: Google Java Format
 
-        on: [ push, pull_request ]
-
-        jobs:
-
-          formatting:
-            runs-on: ubuntu-latest
-            steps:
-              - uses: actions/checkout@v3 # v2 minimum required
-              - uses: axel-op/googlejavaformat-action@v3
-                with:
-                  args: "--set-exit-if-changed"
-
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # v2 minimum required
+      - uses: axel-op/googlejavaformat-action@v3
+        with:
+          args: "--set-exit-if-changed"
 
 
      
