@@ -59,7 +59,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: badges
           force: true
-
-
-
-     
+      - name: Google Java Format
+        uses: axel-op/googlejavaformat-action@v3.6.0
